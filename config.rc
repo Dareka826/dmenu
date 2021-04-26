@@ -16,7 +16,7 @@ XINERAMAFLAGS="-DXINERAMA"
 FREETYPELIBS="-lfontconfig -lXft"
 FREETYPEINC="/usr/include/freetype2"
 # OpenBSD (uncomment)
-#FREETYPEINC="$(X11INC)/freetype2"
+#FREETYPEINC="$X11INC/freetype2"
 
 # includes and libs
 INCS="-I$X11INC -I$FREETYPEINC"
@@ -28,5 +28,8 @@ CFLAGS="-std=c99 -pedantic -Wall -Os $INCS $CPPFLAGS"
 LDFLAGS="$LIBS"
 
 # compiler and linker
-CC="cc"
+CC="${CC:-cc}"
+
+SRC="drw.c dmenu.c stest.c util.c"
+OBJ="$(echo "$SRC" | sed 's/\.c/\.o/g')"
 
