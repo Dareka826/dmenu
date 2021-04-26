@@ -855,6 +855,8 @@ main(int argc, char *argv[])
 			fast = 1;
 		else if (!strcmp(argv[i], "-F"))   /* grabs keyboard before reading stdin */
 			fuzzy = 0;
+		else if (!strcmp(argv[i], "-i"))   /* ignore old flag for case insensitivity */
+			continue;
 		else if (!strcmp(argv[i], "-s")) { /* case-sensitive item matching */
 			fstrncmp = strncmp;
 			fstrstr = strstr;
