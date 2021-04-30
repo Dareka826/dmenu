@@ -1,6 +1,6 @@
 
 redo-ifchange config.rc $2.c
-redo-ifchange arg.h config.h drw.h
+redo-ifchange arg.h config.h.ifmissing drw.h
 . ./config.rc
 
 # Compile $2.c source file to $2.o
