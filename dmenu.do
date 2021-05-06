@@ -1,6 +1,9 @@
 
-redo-ifchange config.rc dmenu.o drw.o util.o
+redo-ifchange config.rc
 . ./config.rc
 
-$CC -o $3 dmenu.o drw.o util.o $LDFLAGS
+OBJS="dmenu.o drw.o util.o"
+redo-ifchange $OBJS
+
+$CC -o $3 $OBJS $LDFLAGS
 

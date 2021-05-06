@@ -1,6 +1,9 @@
 
-redo-ifchange config.rc stest.o
+redo-ifchange config.rc
 . ./config.rc
 
-$CC -o $3 stest.o $LDFLAGS
+OBJS="stest.o"
+redo-ifchange $OBJS
+
+$CC -o $3 $OBJS $LDFLAGS
 

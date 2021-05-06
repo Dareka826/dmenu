@@ -1,6 +1,7 @@
 
 redo-ifchange config.rc
 . ./config.rc
+
 redo all
 
 mkdir -p ${DESTDIR}${PREFIX}/bin
