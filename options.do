@@ -1,6 +1,5 @@
 
-#redo-ifchange config.rc
-redo-always
+redo-ifchange config.rc
 . ./config.rc
 
 printf "dmenu build options:\n"     >&2

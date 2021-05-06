@@ -1,6 +1,7 @@
 
-redo-ifchange config.rc all
+redo-ifchange config.rc
 . ./config.rc
+redo all
 
 mkdir -p ${DESTDIR}${PREFIX}/bin
 cp -f dmenu dmenu_path dmenu_run stest ${DESTDIR}${PREFIX}/bin

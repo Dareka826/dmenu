@@ -1,6 +1,8 @@
 
-redo-ifchange config.rc clean
+redo-ifchange config.rc
 . ./config.rc
+
+redo clean
 
 mkdir -p dmenu-$VERSION
 cp LICENSE README *.do arg.h config.def.h config.rc dmenu.1 \
